@@ -1,6 +1,0 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://ch37extartks5"]
-
-[ext_resource type="Script" path="res://tools/tile/placetile.gd" id="1_w3aba"]
-
-[resource]
-script = ExtResource("1_w3aba")
