@@ -1,0 +1,64 @@
+[gd_scene load_steps=2 format=3 uid="uid://cv5li8e67qq6n"]
+
+[ext_resource type="Script" path="res://user/ui.gd" id="1_0bgw8"]
+
+[node name="UI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0bgw8")
+
+[node name="Control" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="selectedtool" type="Label" parent="Control"]
+layout_mode = 1
+offset_right = 1152.0
+offset_bottom = 26.0
+size_flags_vertical = 0
+text = "aaa"
+
+[node name="tiletools" type="HBoxContainer" parent="Control"]
+visible = false
+layout_mode = 2
+offset_top = 582.0
+offset_right = 1152.0
+offset_bottom = 613.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="placetile" type="Button" parent="Control/tiletools"]
+layout_mode = 2
+text = "Place Tile"
+
+[node name="toolselect" type="HBoxContainer" parent="Control"]
+layout_mode = 2
+offset_top = 617.0
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_vertical = 8
+
+[node name="Tiles" type="Button" parent="Control/toolselect"]
+layout_mode = 2
+size_flags_vertical = 8
+text = "Tile Tools"
+
+[node name="Button2" type="Button" parent="Control/toolselect"]
+layout_mode = 2
+
+[node name="Button3" type="Button" parent="Control/toolselect"]
+layout_mode = 2
+
+[node name="Button4" type="Button" parent="Control/toolselect"]
+layout_mode = 2
+
+[connection signal="pressed" from="Control/tiletools/placetile" to="." method="_on_placetile_pressed"]
+[connection signal="pressed" from="Control/toolselect/Tiles" to="." method="_on_tiles_pressed"]
